@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mini_projet?useTimezone=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Hibernate -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <!-- Entities -->
+        <mapping class="com.mycompany.miniprojet.Produit"/>
+        <mapping class="com.mycompany.miniprojet.Famille"/>
+        <mapping class="com.mycompany.miniprojet.Etiquette"/>
+        <mapping class="com.mycompany.miniprojet.Commande"/>
+        <mapping class="com.mycompany.miniprojet.Client"/>
+    </session-factory>
+</hibernate-configuration>
